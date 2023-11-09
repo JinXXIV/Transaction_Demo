@@ -6,6 +6,9 @@ public class UserTransactionId implements Serializable {
     private String accountId;
     private String transactionType;
 
+    public UserTransactionId() {
+    }
+
     public UserTransactionId(String accountId, String transactionType) {
         this.accountId = accountId;
         this.transactionType = transactionType;

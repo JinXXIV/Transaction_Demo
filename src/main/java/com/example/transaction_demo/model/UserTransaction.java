@@ -1,6 +1,7 @@
 package com.example.transaction_demo.model;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
 @IdClass(UserTransactionId.class)
@@ -11,9 +12,13 @@ public class UserTransaction {
     private String transactionType;
     private int maxValue;
     private int minValue;
+
     @ManyToOne
     @JoinColumn(name="transactionType", referencedColumnName = "Type", insertable = false, updatable = false)
     private Transaction transaction;
+
+    public UserTransaction() {
+    }
 
     public UserTransaction(String accountId, String transactionType, int maxValue, int minValue) {
         this.accountId = accountId;

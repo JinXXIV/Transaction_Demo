@@ -12,6 +12,9 @@ public class Transaction {
     @CollectionTable(name = "allowValue", joinColumns = @JoinColumn(name = "type"))
     private List<Integer> allowValue;
 
+    public Transaction() {
+    }
+
     public Transaction(String type, List<Integer> allowValue) {
         this.type = type;
         this.allowValue = allowValue;
